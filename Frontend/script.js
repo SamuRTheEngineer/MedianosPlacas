@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Detectar en qué página estamos
     if (document.getElementById("registroForm")) {
         inicializarFormulario();
     } else if (document.getElementById("registroTabla")) {
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Función para inicializar el formulario en `formularioRegistro.html`
 function inicializarFormulario() {
     let nuevoID = Date.now();
     document.getElementById("id").value = nuevoID;
@@ -34,14 +32,13 @@ function inicializarFormulario() {
     });
 }
 
-// Función para mostrar registros en `index.html`
 function mostrarRegistros() {
     let tabla = document.getElementById("registroTabla");
 
     if (!tabla) return;
 
     let registros = JSON.parse(sessionStorage.getItem("registros")) || [];
-    tabla.innerHTML = ""; // Limpiar la tabla antes de actualizarla
+    tabla.innerHTML = "";
 
     registros.forEach((registro, index) => {
         let fila = document.createElement("tr");
@@ -58,12 +55,11 @@ function mostrarRegistros() {
     });
 }
 
-// Función para eliminar registros correctamente
 function eliminarRegistro(index) {
     let registros = JSON.parse(sessionStorage.getItem("registros")) || [];
 
-    registros.splice(index, 1); // Eliminar del array
+    registros.splice(index, 1); 
     sessionStorage.setItem("registros", JSON.stringify(registros));
 
-    mostrarRegistros(); // Volver a renderizar la tabla
+    mostrarRegistros();
 }

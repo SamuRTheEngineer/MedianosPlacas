@@ -1,4 +1,3 @@
-/* Estilos generales */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -11,7 +10,6 @@ body {
     overflow: hidden;
 }
 
-/* Imagen de fondo con desenfoque */
 body::before {
     content: "";
     position: fixed;
@@ -27,7 +25,6 @@ body::before {
 }
 
 
-/* Título principal */
 h2 {
     font-size: 28px;
     margin-top: 20px;
@@ -36,7 +33,6 @@ h2 {
     
 }
 
-/* Tabla */
 table {
     width: 80%;
     margin: 20px auto;
@@ -47,7 +43,6 @@ table {
     backdrop-filter: blur(8px);
 }
 
-/* Cabecera de la tabla */
 thead {
     background: rgba(138, 182, 249, 0.3);
     color: #ffffff;
@@ -59,12 +54,10 @@ th, td {
     text-align: center;
 }
 
-/* Filas impares con efecto */
 tbody tr:nth-child(odd) {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Botón de eliminar */
 .delete-btn {
     background: #ff4c4c;
     border: none;
@@ -79,7 +72,6 @@ tbody tr:nth-child(odd) {
     background: #ff1e1e;
 }
 
-/* Botón para registrar nueva placa */
 .add-btn {
     display: inline-block;
     margin-top: 20px;
